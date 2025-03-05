@@ -4,6 +4,8 @@ public:
         long long count = 0;
         int n = piles.size();
         for (int i = 0; i < n; i++) {
+              if (count > (long long)h)
+            return false;
             if (piles[i] < mid)
                 count++;
             else {
