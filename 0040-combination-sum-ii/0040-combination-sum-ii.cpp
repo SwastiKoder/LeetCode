@@ -11,11 +11,11 @@ public:
                         // should pass to avoid repeatation
             return;
         for (int i = idx; i < candidates.size(); i++) {
-            if (i > idx && candidates[i] == candidates[i - 1])
+            if (i > idx && candidates[i] == candidates[i - 1]) // checks for element is same or not
                 continue;
             ans.push_back(candidates[i]);
             combination(candidates, target - candidates[i], v, size, ans, i+1);
-            ans.pop_back();
+            ans.pop_back(); // passes i+1 to avoid duplicate element think for 2 , 3 , 5 and you are talented to get this
         }
     }
     vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
