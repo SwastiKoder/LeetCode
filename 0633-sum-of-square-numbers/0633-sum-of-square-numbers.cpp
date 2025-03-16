@@ -32,12 +32,10 @@ public:
             }
 
             else if (!isPerfectSquare(y)) {
-                y = (int)sqrt(y) * (int)sqrt(y);
+                y = (int)sqrt(y) * (int)sqrt(y); // har samay y+x = c
                 x = c - y;
             } else {
-                y = ((int)sqrt(x) + 1) *
-                    ((int)sqrt(x) +
-                     1); // for the next big number than x we use +1
+                x = ((int)sqrt(x) + 1) * ((int)sqrt(x) + 1);
                 y = c - x;
             }
         }
