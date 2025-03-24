@@ -2,18 +2,19 @@ class Solution {
 public:
     int missingNumber(vector<int>& nums) {
         int n = nums.size();
-        sort(nums.begin(), nums.end());
-        for (int i = 0; i < n; i++) {
+        int i = 0;
+        while (i < n) {
             int correctIdx = nums[i];
-            if (i == n - 1) {
-                if (nums[n - 1] != n)
-                    return n;
-            }
-            if (correctIdx != i) {
-                return i;
-                break;
+            if (nums[i] == i || nums[i] == n)
+                i++;
+            else {
+                swap(nums[i], nums[correctIdx]);
             }
         }
-        return 0;
+        for (int i = 0; i < n; i++) {
+            if (nums[i] != i)
+                return i; // because the arrayis sorted and we do not have the indexed number suppose arr[i] = 9 as n = 9 but i = 4 which supposed to be return 4
+        }
+        return n;
     }
 };
