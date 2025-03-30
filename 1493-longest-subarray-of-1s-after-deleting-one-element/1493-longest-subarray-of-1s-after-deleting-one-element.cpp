@@ -22,7 +22,7 @@ public:
             }
         }
         maxLen = max(j-i-1 , maxLen) ;
-        if(i==0) return n-1 ;
-        else return maxLen ;
+        //if(i==0) return n-1 ;
+         return maxLen ;
     }
 };
