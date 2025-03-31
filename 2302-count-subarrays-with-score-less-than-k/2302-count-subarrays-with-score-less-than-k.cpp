@@ -9,7 +9,7 @@ public:
                 sum -= nums[i];
                 i++;
             }
-            ans += (j - i + 1);  // Count valid subarrays
+            ans += (j - i + 1);  // Count valid subarrays after excluding i and every subarray with j
             j++;
         }
         return ans;
