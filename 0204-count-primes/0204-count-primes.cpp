@@ -14,7 +14,7 @@ public:
         fillSieve(sieve);
         sieve[0] = 0;
         sieve[1] = 0;
-        for (int i = 1; i < sieve.size()-1 ; i++) {
+        for (int i = 0; i < sieve.size()-1 ; i++) {
             if (sieve[i] == 1)
                 count++;
         }
