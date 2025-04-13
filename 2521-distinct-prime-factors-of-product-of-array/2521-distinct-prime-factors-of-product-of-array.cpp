@@ -16,9 +16,9 @@ public:
         }
         vector<bool> sieve(maxel + 1, 1);
         fillSieve(sieve);
-        if (n > 0)
+        if (maxel + 1 > 0)
             sieve[0] = 0;
-        if (n > 1)
+        if (maxel + 1 > 1)
             sieve[1] = 0;
         vector<int> primes;
         for (int i = 0; i < sieve.size(); i++) {
@@ -36,7 +36,7 @@ public:
                     taken[j] = 1;
             }
         }
-       int count = 0;
+        int count = 0;
         for (int i = 0; i < taken.size(); i++) {
             if (taken[i] == 1)
                 count++;
