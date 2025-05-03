@@ -19,10 +19,13 @@ public:
             fast = fast->next->next;
         }
         ListNode* temp = head;
-        while (temp->next != slow) {
-            temp = temp->next;
+        if (temp->next != NULL) {
+            while (temp->next != slow) {
+                temp = temp->next;
+            }
+            temp->next = temp->next->next;
+            return head;
         }
-        temp->next = temp->next->next;
-        return head;
+        else return head->next ;
     }
 };
