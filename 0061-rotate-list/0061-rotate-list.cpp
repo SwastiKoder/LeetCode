@@ -20,19 +20,24 @@ public:
             temp = temp->next;
         }
         k = k % n;
+        if (k == 0)
+            return head;
         ListNode* temp1 = head;
-        ListNode* temp2 = head->next;
-        for (int i = 1; i <= k; i++) {
-            while (temp2->next != NULL) {
-                temp2 = temp2->next;
-                temp1 = temp1->next;
-            }
-            temp2->next = head;
-            head = temp2;
-            temp1->next = NULL;
-            temp1 = head;
-            temp2 = head->next;
+        ListNode* temp2 = head;
+        ListNode* tail = head;
+        while (tail->next != NULL) {
+            tail = tail->next;
         }
+        for (int i = 1; i <= n - k; i++) {
+            temp2 = temp2->next;
+        }
+        for (int i = 1; i <= n - k - 1; i++) {
+            temp1 = temp1->next;
+        }
+        tail->next = head;
+        temp1->next = NULL;
+        head = temp2;
+        tail = temp1;
         return head;
     }
 };
