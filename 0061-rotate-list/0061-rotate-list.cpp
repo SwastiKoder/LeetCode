@@ -15,7 +15,8 @@ public:
             return head;
         int n = 1;
         ListNode* temp = head;
-        while (temp->next != NULL) { // we are one step behind from NULL that is why we started from n = 1
+        while (temp->next != NULL) { // we are one step behind from NULL that is
+                                     // why we started from n = 1
             n++;
             temp = temp->next;
         }
@@ -32,8 +33,8 @@ public:
             temp1 = temp1->next;
         }
         tail->next = head;
+        head = temp1->next;
         temp1->next = NULL;
-        head = temp2;
         tail = temp1;
         return head;
     }
