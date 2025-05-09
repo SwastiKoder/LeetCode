@@ -16,7 +16,8 @@ public:
         ListNode* head2 = new ListNode(-1);
         ListNode* temp1 = head;
         ListNode* temp2 = head2;
-        while (temp1 != NULL) {
+        // deep copy of head
+        while (temp1) {
             temp2->next = new ListNode(temp1->val);
             temp1 = temp1->next;
             temp2 = temp2->next;
@@ -25,7 +26,7 @@ public:
         temp2 = head2;
         temp1 = head;
         temp2 = reverse(head2);
-        while (temp1 != NULL && temp2 != NULL) {
+        while (temp1) {
             if (temp1->val != temp2->val)
                 return false;
             temp1 = temp1->next;
