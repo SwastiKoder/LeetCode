@@ -4,7 +4,7 @@ public:
         ListNode* curr = head;
         ListNode* prev = NULL;
         ListNode* Next = NULL;
-        while (curr != NULL) {
+        while (curr) {
             Next = curr->next;
             curr->next = prev;
             prev = curr;
@@ -13,24 +13,20 @@ public:
         return prev;
     }
     bool isPalindrome(ListNode* head) {
-        ListNode* head2 = new ListNode(-1);
-        ListNode* temp1 = head;
-        ListNode* temp2 = head2;
-        // deep copy of head
-        while (temp1) {
-            temp2->next = new ListNode(temp1->val);
-            temp1 = temp1->next;
-            temp2 = temp2->next;
+        ListNode* slow = head;
+        ListNode* fast = head;
+        while (fast != NULL && fast->next!= NULL && fast->next->next !=NULL) {
+            slow = slow->next;
+            fast = fast->next->next;
         }
-        head2 = head2->next;
-        temp2 = head2;
-        temp1 = head;
-        temp2 = reverse(head2);
-        while (temp1) {
-            if (temp1->val != temp2->val)
+        ListNode* nh = reverse(slow->next);
+        ListNode* a = head;
+        ListNode* b = nh;
+        while (b && a) {
+            if (a->val != b->val)
                 return false;
-            temp1 = temp1->next;
-            temp2 = temp2->next;
+            a = a->next;
+            b = b->next;
         }
         return true;
     }
