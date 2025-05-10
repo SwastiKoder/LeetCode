@@ -27,13 +27,12 @@ public:
             ta = ta->next;
             tc->next = tb;
             tc = tb;
-
             tb = tb->next;
         }
         if (ta != NULL) {
-            tc ->next = ta;
-            tc = ta;
-            ta->next = NULL;
+            tc->next = ta;
+            // tc = ta;
+            // ta->next = NULL;
         }
         // ta->next = NULL ;
         head = dummy->next;
