@@ -2,15 +2,7 @@ class Solution {
 public:
     vector<int> nodesBetweenCriticalPoints(ListNode* head) {
         vector<int> ans(2, -1);
-        // int size = 0;
-        // ListNode* temp = head;
-        // while (temp != NULL) {
-        //     temp = temp->next;
-        //     size++;
-        // }
-        // if (size <= 2)
-        //     return ans;
-       ListNode* temp = head;
+        ListNode* temp = head;
         ListNode* prev = temp;
         temp = temp->next;
         ListNode* Next = temp->next;
@@ -26,7 +18,8 @@ public:
             Next = Next->next;
             count++;
         }
-        if(cp.size()<2) return ans ;
+        if (cp.size() < 2)
+            return ans;
         int maxdis = 0;
         maxdis = cp[cp.size() - 1] - cp[0];
         int mindis = INT_MAX;
