@@ -1,33 +1,55 @@
 class Solution {
 public:
     vector<int> nodesBetweenCriticalPoints(ListNode* head) {
-        vector<int> ans(2, -1);
-        ListNode* temp = head;
-        ListNode* prev = temp;
-        temp = temp->next;
-        ListNode* Next = temp->next;
-        vector<int> cp;
-        int count = 2; // showing the index of critical point
-        while (Next != NULL) {
-            if (prev->val < temp->val && Next->val < temp->val)
-                cp.push_back(count);
-            else if (prev->val > temp->val && Next->val > temp->val)
-                cp.push_back(count);
+        int idx = 1;
+        int fidx = -1;
+        int sidx = -1;
+        ListNode* prev = head;
+        ListNode* curr = head->next;
+        ListNode* Next = head->next->next;
+        while (Next) {
+            if (curr->val > prev->val && curr->val > Next->val ||
+                curr->val < prev->val && curr->val < Next->val) {
+                if (fidx == -1)
+                    fidx = idx;
+                else
+                    sidx = idx;
+            }
             prev = prev->next;
-            temp = temp->next;
+            curr = curr->next;
             Next = Next->next;
-            count++;
+            idx++;
         }
-        if (cp.size() < 2)
-            return ans;
-        int maxdis = 0;
-        maxdis = cp[cp.size() - 1] - cp[0];
-        int mindis = INT_MAX;
-        for (int i = 0; i < cp.size() - 1; i++) {
-            mindis = min(mindis, cp[i + 1] - cp[i]);
+        if (sidx == -1)
+            return {-1, -1};
+        int maxDis = sidx - fidx;
+        idx = 1;
+        fidx = -1;
+        sidx = -1;
+        prev = head;
+        curr = head->next;
+        Next = head->next->next;
+        int minDis = INT_MAX;
+        while (Next) {
+            if (curr->val > prev->val && curr->val > Next->val ||
+                curr->val < prev->val && curr->val < Next->val) {
+                if (fidx == -1)
+                    fidx = idx;
+                else {
+                    sidx = idx;
+                }
+                if (sidx != -1) {
+                    minDis = min(minDis, sidx - fidx);
+                    fidx = sidx;
+                }
+            }
+            prev = prev->next;
+            curr = curr->next;
+            Next = Next->next;
+            idx++;
         }
-        ans[0] = mindis;
-        ans[1] = maxdis;
-        return ans;
+        if (minDis == INT_MAX)
+            return {-1, -1};
+        return {minDis, maxDis};
     }
 };
