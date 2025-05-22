@@ -22,8 +22,7 @@ public:
             else
                 return false;
         }
-        if (st.size() != 0)
-            return false;
-        return true;
+       return st.empty();
+        
     }
 };
