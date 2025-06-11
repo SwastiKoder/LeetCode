@@ -1,29 +1,16 @@
 class Solution {
 public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
-        int n = nums.size();
-        vector<int> ngi(n);
-        ngi[n - 1] = n;
-        stack<int> st;
-        st.push(n-1);
-        for (int i = n - 2; i >= 0; i--) {
-            while (st.size() != 0 && nums[st.top()] <= nums[i])
-                st.pop();
-            if (st.size() == 0)
-                ngi[i] = n;
-            else
-                ngi[i] = st.top();
-            st.push(i);
-        }
+        if(k==1) return nums;
+        deque<int> dq;//always in decreasing order
         vector<int> ans;
-        for (int i = 0; i < n - k + 1; i++) {
-            int mx = nums[i];
-            int j = i;
-            while (j < i + k) { // if nge present inside the window
-                mx = nums[j];
-                j = ngi[j]; // automatically moves j
+        for (int i = 0; i < nums.size(); i++) {
+            while (dq.size() > 0 && nums[i] > dq.back())
+                dq.pop_back();
+            dq.push_back(nums[i]);
+            if (i >= k - 1) {
+                ans.push_back(dq.front());
             }
-            ans.push_back(mx);
         }
         return ans;
     }
