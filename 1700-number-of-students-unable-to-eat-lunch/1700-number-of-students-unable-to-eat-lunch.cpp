@@ -5,24 +5,25 @@ public:
         for (int i = 0; i < students.size(); i++) {
             q.push(students[i]);
         }
-        int i = 0 ;
-        int count = 0 ;
-        while(i<sandwiches.size()){
-            if(q.front()==sandwiches[i]){
+        int i = 0;
+        int count = 0;
+        while (q.size() > 0) {
+            if (q.front() == sandwiches[i]) {
                 q.pop();
                 i++;
-                count=0;
-            }
-            else{
+                count = 0;
+            } else {
                 int x = q.front();
                 q.pop();
                 q.push(x);
                 count++;
-                if(count>=q.size()){
-                  break;
-                }
+                if (count > q.size())
+                    break;
             }
         }
-        return q.size();
+        if (q.size() == 0 || i >= sandwiches.size())
+            return 0;
+        else
+            return q.size();
     }
 };
