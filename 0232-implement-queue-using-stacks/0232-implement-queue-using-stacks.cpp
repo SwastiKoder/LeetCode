@@ -1,50 +1,60 @@
 class MyQueue {
 public:
-    stack<int> st;
-    stack<int> helper;
-    int size;
-    MyQueue() { size = 0; }
-
-    void push(int x) {
-        st.push(x);
-        size++;
+    void insertAtBottom(stack<int>& st, int x) {
+        if (st.size() == 0) {
+            st.push(x);
+            return;
+        }
+        int y = st.top();
+        st.pop();
+        insertAtBottom(st, x);
+        st.push(y);
     }
-
-    int pop() {
-        if (size == 0) {
-            return -1;
-        }
-        while (st.size() > 1) {
-            helper.push(st.top());
-            st.pop();
-        }
+    void reverse(stack<int>& st) {
+        if (st.size() == 0)
+            return;
         int x = st.top();
         st.pop();
-        while (helper.size() > 0) {
-            st.push(helper.top());
-            helper.pop();
+        reverse(st);
+        insertAtBottom(st, x);
+    }
+    stack<int> st1;
+    stack<int> st2;
+    MyQueue() {}
+
+    void push(int x) { st1.push(x); }
+
+    int pop() {
+        while (st1.size() > 1) {
+            st2.push(st1.top());
+            st1.pop();
+        }
+        int x = st1.top();
+        st1.pop();
+        //reverse(st2);
+        while (st2.size() > 0) {
+            st1.push(st2.top());
+            st2.pop();
         }
         return x;
     }
 
     int peek() {
-        if (size == 0) {
-            return -1;
+        while(st1.size()>1){
+            st2.push(st1.top());
+            st1.pop();
         }
-        while (st.size() > 1) {
-            helper.push(st.top());
-            st.pop();
-        }
-        int x = st.top();
-        while (helper.size() > 0) {
-            st.push(helper.top());
-            helper.pop();
+        int x = st1.top();
+        //reverse(st2);
+         while (st2.size() > 0) {
+            st1.push(st2.top());
+            st2.pop();
         }
         return x;
     }
 
     bool empty() {
-        if(st.size()==0)return true;
+        if(st1.size()==0)return true;
         else return false;
     }
 };
