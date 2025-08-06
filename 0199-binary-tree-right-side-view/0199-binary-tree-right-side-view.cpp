@@ -1,10 +1,9 @@
 class Solution {
 public:
-    int level(TreeNode* root) {
-        if (root == NULL)
-            return 0;
-        return 1 + max(level(root->left), level(root->right));
-    }
+int level(TreeNode* root){
+    if(root==NULL) return 0;
+    return 1+max(level(root->left),level(root->right));
+}
     void preorder(TreeNode* root, vector<int>& ans, int level) {
         if (root == NULL)
             return;
