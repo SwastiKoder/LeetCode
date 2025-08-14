@@ -9,6 +9,6 @@ public:
           return  searchBST(root->left, val);
         else
          return   searchBST(root->right, val);
-         return new TreeNode(-1);
+         return root;
     }
 };
