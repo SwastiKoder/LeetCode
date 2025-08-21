@@ -1,27 +1,26 @@
 class Solution {
 public:
     TreeNode* insertIntoBST(TreeNode* root, int val) {
-        if (root == NULL)
-           {
+        if (root == NULL) {
             TreeNode* n = new TreeNode(val);
             return n;
-           }
+        }
         if (root->val > val) {
             if (root->left == NULL) {
-                TreeNode* n = new TreeNode(val);
-                root->left = n;
+
+                root->left = new TreeNode(val);
+                ;
                 return root;
-            }
-            insertIntoBST(root->left, val);
-        }
-        if (root->val < val) {
+            } else
+                insertIntoBST(root->left, val);
+        } else {
             if (root->right == NULL) {
-                TreeNode* n = new TreeNode(val);
-                root->right = n;
+
+                root->right = new TreeNode(val);
                 return root;
-            }
-            insertIntoBST(root->right, val);
+            } else
+                insertIntoBST(root->right, val);
         }
-     return root;   
+        return root;
     }
 };
