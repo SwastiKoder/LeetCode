@@ -1,22 +1,18 @@
 class Solution {
 public:
-    long long mx(TreeNode* root) {
+    vector<int> v;
+    void inorder(TreeNode* root) {
         if (root == NULL)
-            return LLONG_MIN;
-        return max((long long)root->val, max(mx(root->left), mx(root->right)));
-    }
-    long long mn(TreeNode* root) {
-        if (root == NULL)
-            return LLONG_MAX;
-        return min((long long)root->val, min(mn(root->left), mn(root->right)));
+            return;
+        inorder(root->left);
+        v.push_back(root->val);
+        inorder(root->right);
     }
     bool isValidBST(TreeNode* root) {
-        if (root == NULL)
-            return true;
-        if ((long long)root->val <= mx(root->left))
-            return false;
-        else if ((long long)root->val >= mn(root->right))
-            return false;
-        return isValidBST(root->left) && isValidBST(root->right);
+        inorder(root);
+        for (int i = 0; i < v.size()-1; i++) {
+           if(v[i]>=v[i+1])return false;
+        }
+        return true;
     }
 };
