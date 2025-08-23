@@ -22,3 +22,4 @@ public:
         return helper(v, 0, v.size() - 1);
     }
 };
+static const auto _ = [](){ std::ios::sync_with_stdio(false); std::cin.tie(nullptr); return 0; }();
