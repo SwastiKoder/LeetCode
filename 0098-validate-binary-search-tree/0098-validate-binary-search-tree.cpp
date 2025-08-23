@@ -9,7 +9,7 @@ public:
         if (prev != NULL) {
             if (prev->val >= root->val) {
                 flag = false;
-               
+                return;
             }
         }
         prev = root;
