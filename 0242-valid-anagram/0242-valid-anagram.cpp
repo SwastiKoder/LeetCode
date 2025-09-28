@@ -4,19 +4,15 @@ public:
         if (s.length() != t.length())
             return false;
         unordered_map<char, int> m1;
-        unordered_map<char, int> m2;
+
         for (int i = 0; i < s.length(); i++) {
             m1[s[i]]++;
-            m2[t[i]]++;
         }
-
-        for (auto ele : m1) {
-            char ch1 = ele.first;
-            int f1 = ele.second;
-            if (m2.find(ch1) != m2.end()) {
-                int f2 = m2[ch1];
-                if (f1 != f2)
-                    return false;
+        for (int i = 0; i < t.length(); i++) {
+            if (m1.find(t[i]) != m1.end()) {
+                m1[t[i]]--;
+                if (m1[t[i]] == 0)
+                    m1.erase(t[i]);
             } else
                 return false;
         }
