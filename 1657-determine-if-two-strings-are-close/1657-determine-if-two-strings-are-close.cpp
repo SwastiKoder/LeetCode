@@ -9,8 +9,8 @@ public:
             mp1[word1[i]]++;
             mp2[word2[i]]++;
         }
-        for (auto ele1 : mp1) {
-            if (mp2.find(ele1.first) == mp2.end())
+        for (auto ele1 : mp2) {
+            if (mp1.find(ele1.first) == mp1.end())
                 return false;
         }
         vector<int> v1, v2;
