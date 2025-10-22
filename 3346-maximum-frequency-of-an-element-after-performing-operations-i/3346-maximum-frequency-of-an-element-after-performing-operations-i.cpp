@@ -1,31 +1,26 @@
 class Solution {
 public:
     int maxFrequency(vector<int>& nums, int k, int numOperations) {
-        if (nums.empty())
-            return 0;
+        int maxVal = *max_element(nums.begin(), nums.end()) + k;
+        unordered_map<int, int> freq;
+        vector<int> diff(maxVal + 2, 0);
+        for (int x : nums) {
+            freq[x]++;
+            int l = max(0, x - k);
+            int r = min(maxVal, x + k);
 
-        int maxEl = *max_element(begin(nums), end(nums)) + k;
-        vector<int> cum(maxEl + 1, 0);
-        for (int ele : nums) {
-            cum[ele]++;
+            diff[l]++;
+            diff[r + 1]--;
         }
-        for (int i = 1; i < (int)cum.size(); i++) {
-            cum[i] += cum[i - 1];
+        for (int i = 1; i < diff.size(); i++) {
+            diff[i] += diff[i - 1];
         }
-
         int res = 0;
-        // include maxEl
-        for (int target = 0; target <= maxEl; target++) {
-            int l = max(0, target - k);
-            int r = min(target + k, maxEl);
-            int count =
-                cum[r] -
-                (l > 0 ? cum[l - 1] : 0); // numbers within [target-k, target+k]
-            int targetCount = (target > 0 ? cum[target] - cum[target - 1]
-                                          : cum[0]); // frequency of target
-            int needOp = count - targetCount;        // other elements in range
-            int possibleConversion = min(needOp, numOperations) + targetCount;
-            res = max(res, possibleConversion);
+        for (int target = 0; target <= maxVal; target++) {
+            int targetFreq = freq[target];
+            int needConv = diff[target] - targetFreq;
+            int possible = min(needConv, numOperations);
+            res = max(res, possible + targetFreq);
         }
         return res;
     }
