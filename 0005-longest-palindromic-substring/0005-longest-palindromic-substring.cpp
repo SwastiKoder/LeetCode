@@ -22,11 +22,11 @@ public:
                 }
             }
         }
-        // string ans = "";
-        // for (int k = sp; k < maxl; k++) {
-        //     ans.push_back(s[k]);
-        // }
+        string ans = "";
+        for (int k = sp; k < sp + maxl; k++) {
+            ans.push_back(s[k]);
+        }
 
-        return s.substr(sp,maxl);
+        return ans;
     }
 };
