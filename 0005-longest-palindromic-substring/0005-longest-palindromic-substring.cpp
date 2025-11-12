@@ -2,12 +2,14 @@ class Solution {
 public:
     string str;
     bool solve(int i, int j) {
-        if (i >= j)
-            return true;
-        if (str[i] == str[j]) {
-            return solve(i + 1, j - 1);
-        } else
-            return false;
+        while (i < j) {
+            if (str[i] == str[j]) {
+                i++;
+                j--;
+            } else
+                return false;
+        }
+        return true;
     }
     string longestPalindrome(string s) {
         str = s;
@@ -22,8 +24,7 @@ public:
                 }
             }
         }
-      
 
-        return s.substr(sp , maxl);
+        return s.substr(sp, maxl);
     }
 };
