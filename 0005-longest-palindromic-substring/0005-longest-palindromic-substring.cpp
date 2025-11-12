@@ -22,11 +22,8 @@ public:
                 }
             }
         }
-        string ans = "";
-        for (int k = sp; k < sp + maxl; k++) {
-            ans.push_back(s[k]);
-        }
+      
 
-        return ans;
+        return s.substr(sp , maxl);
     }
 };
