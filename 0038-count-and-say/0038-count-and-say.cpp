@@ -1,24 +1,27 @@
 class Solution {
 public:
     string countAndSay(int n) {
+        int x = 2;
         if (n == 1)
             return "1";
-        string str = countAndSay(
-            n - 1); // for calling the nesxt function until it reaches n = 1
-        string ztr = "";
-        char ch = str[0];
-        int freq = 1;
-        for (int i = 1; i < str.length();
-             i++) { // a string question more than a recursion question
-            if (ch == str[i]) {
-                freq++;
-            } else {
-                ztr = ztr + (to_string(freq) + ch);
-                freq = 1;
-                ch = str[i];
+        string ans = "1";
+
+        while (x <= n) {
+            string str = "";
+            int count = 1;
+            for (int i = 1; i <= ans.length(); i++) {
+                if (i < ans.length() && ans[i] == ans[i - 1]) {
+                    count++;
+                } else {
+                    str += to_string(count);
+                    str.push_back(ans[i - 1]);
+                    count = 1;
+                    
+                }
             }
+            ans = str;
+            x++;
         }
-          ztr = ztr + (to_string(freq) + ch); // for last character cuz loop breaks after rreaching the last number
-        return ztr;
+        return ans;
     }
 };
