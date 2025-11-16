@@ -4,7 +4,7 @@ public:
         int count = 1;
         string ans = "";
         for (int i = 1; i <= prev.size(); i++) {
-            if (i < prev.size() && prev[i] == prev[i - 1]) {
+            if ( prev[i] == prev[i - 1]) {
                 count++;
             } else {
                 ans += to_string(count);
