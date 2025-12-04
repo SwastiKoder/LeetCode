@@ -2,12 +2,14 @@ class Solution {
 public:
     int lengthOfLastWord(string s) {
         int count = 0;
-        stringstream ss(s);
 
-        string word;
+        int i = s.length() - 1;
 
-        while (ss >> word) {
-            count = word.length();
+        while (i >= 0 && s[i] == ' ')
+            i--;
+        while (i >= 0 && s[i] != ' ') {
+            count++;
+            i--;
         }
 
         return count;
