@@ -1,24 +1,24 @@
 class Solution {
 public:
     int strStr(string haystack, string needle) {
-        if(needle.size()==0)return -1;
-        int m = haystack.size();
-        int n = needle.size();
-        int i = 0;
-        int j = 0;
+        if (haystack.size() < needle.size())
+            return -1;
+        int i = 0, j = 0;
         int start = 0;
-        while (i < m && j < n) {
-            if (needle[j] == haystack[i]) {
+
+        while (i < haystack.size() && j < needle.size()) {
+            if (haystack[i] == needle[j]) {
                 i++;
                 j++;
-                if (j == n)
-                    return i-j;
+                if (j == needle.size())
+                    return i - j;
             } else {
                 j = 0;
-                start++;
                 i = start;
+                start++;
             }
         }
+
         return -1;
     }
 };
