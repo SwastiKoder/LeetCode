@@ -18,7 +18,7 @@ public:
                     break;
                 }
             }
-            if(idx != -1) ans[i] = idx;
+            if(idx != -1) ans[i] = nums2[idx];
         }
         return ans;
     }
