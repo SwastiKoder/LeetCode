@@ -5,8 +5,21 @@ public:
 
         k = k % nums.size();
 
-       reverse(nums.begin()  , nums.begin() + k);
-       reverse(nums.begin() + k, nums.end());
+        int i = k - 1;
+        int j = 0;
+        while (j < i) {
+            swap(nums[j], nums[i]);
+            j++;
+            i--;
+        }
+
+        i = nums.size() - 1;
+        j = k;
+        while (j < i) {
+            swap(nums[j], nums[i]);
+            j++;
+            i--;
+        }
 
         return;
     }
