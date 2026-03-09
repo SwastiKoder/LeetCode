@@ -16,10 +16,10 @@ public:
         }
         vector<int> ans;
 
-        while (k > 0) {
+        while (pq.size() > 0) {
             ans.push_back(pq.top().second);
             pq.pop();
-            k--;
+            
         }
 
         return ans;
