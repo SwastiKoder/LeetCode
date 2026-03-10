@@ -1,31 +1,35 @@
 class Solution {
 public:
     vector<int> frequencySort(vector<int>& nums) {
-        unordered_map<int, int> m;
-        for (int i = 0; i < nums.size(); i++) {
-            m[nums[i]]++;
-        }
+        unordered_map<int, int> mp;
+
         auto cmp = [](pair<int, int>& a, pair<int, int>& b) {
             if (a.first == b.first)
-                return a.second < b.second;
+                return a.second < b.second; // should a come after b
             return a.first > b.first;
         };
-        priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(cmp)> p(
+        priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(cmp)> pq(
             cmp);
-
-        for (auto x : m) {
-            p.push({x.second, x.first});
-        }
+    
         vector<int> ans;
-        while (p.size()) {
-            int x = p.top().first;
-            int y = p.top().second;
-            while (x > 0) {
-                ans.push_back(y);
-                x--;
-            }
-            p.pop();
+
+        for (int x : nums) {
+            mp[x]++;
         }
+
+        for (auto x : mp) {
+            pq.push({x.second, x.first});
+        }
+
+        while (pq.size() > 0) {
+            int n = pq.top().first;
+            while (n > 0) {
+                ans.push_back(pq.top().second);
+                n--;
+            }
+            pq.pop();
+        }
+
         return ans;
     }
 };
