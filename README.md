@@ -50,6 +50,7 @@ Let me know if you'd like any more modifications! 🚀
 | [0215-kth-largest-element-in-an-array](https://github.com/SwastiKoder/LeetCode/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0347-top-k-frequent-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/SwastiKoder/LeetCode/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
+| [0658-find-k-closest-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0658-find-k-closest-elements/) | Medium |
 | [1636-sort-array-by-increasing-frequency](https://github.com/SwastiKoder/LeetCode/tree/main/1636-sort-array-by-increasing-frequency/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
@@ -62,6 +63,7 @@ Let me know if you'd like any more modifications! 🚀
 | [0215-kth-largest-element-in-an-array](https://github.com/SwastiKoder/LeetCode/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0347-top-k-frequent-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/SwastiKoder/LeetCode/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
+| [0658-find-k-closest-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0658-find-k-closest-elements/) | Medium |
 | [1636-sort-array-by-increasing-frequency](https://github.com/SwastiKoder/LeetCode/tree/main/1636-sort-array-by-increasing-frequency/) | Easy |
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
@@ -69,6 +71,7 @@ Let me know if you'd like any more modifications! 🚀
 | [0215-kth-largest-element-in-an-array](https://github.com/SwastiKoder/LeetCode/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0347-top-k-frequent-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/SwastiKoder/LeetCode/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
+| [0658-find-k-closest-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0658-find-k-closest-elements/) | Medium |
 ## Quickselect
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -78,6 +81,7 @@ Let me know if you'd like any more modifications! 🚀
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/SwastiKoder/LeetCode/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
+| [0658-find-k-closest-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0658-find-k-closest-elements/) | Medium |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -95,4 +99,12 @@ Let me know if you'd like any more modifications! 🚀
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0347-top-k-frequent-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
+## Two Pointers
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0658-find-k-closest-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0658-find-k-closest-elements/) | Medium |
+## Sliding Window
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0658-find-k-closest-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0658-find-k-closest-elements/) | Medium |
 <!---LeetCode Topics End-->
