@@ -52,6 +52,7 @@ Let me know if you'd like any more modifications! 🚀
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/SwastiKoder/LeetCode/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
 | [0658-find-k-closest-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0658-find-k-closest-elements/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/SwastiKoder/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
+| [1046-last-stone-weight](https://github.com/SwastiKoder/LeetCode/tree/main/1046-last-stone-weight/) | Easy |
 | [1636-sort-array-by-increasing-frequency](https://github.com/SwastiKoder/LeetCode/tree/main/1636-sort-array-by-increasing-frequency/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
@@ -76,6 +77,7 @@ Let me know if you'd like any more modifications! 🚀
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/SwastiKoder/LeetCode/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
 | [0658-find-k-closest-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0658-find-k-closest-elements/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/SwastiKoder/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
+| [1046-last-stone-weight](https://github.com/SwastiKoder/LeetCode/tree/main/1046-last-stone-weight/) | Easy |
 ## Quickselect
 | Problem Name | Difficulty |
 | ------- | ------- |
