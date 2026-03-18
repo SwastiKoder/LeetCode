@@ -1,32 +1,41 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
 class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
-        if (lists.size() == 0)
-            return NULL;
-        if (lists.size() == 1)
-            return lists[0];
+        int n = lists.size();
+
         auto cmp = [](ListNode* a, ListNode* b) { return a->val > b->val; };
+
         priority_queue<ListNode*, vector<ListNode*>, decltype(cmp)> pq(cmp);
-        for (int i = 0; i < lists.size(); i++) {
-            ListNode* dummy = lists[i];
-            while (dummy) {
-                ListNode* prev = dummy;
-                dummy = dummy->next;
-                prev->next = NULL;
-                pq.push(prev);
+
+        for (int i = 0; i < n; i++) {
+            ListNode* head = lists[i];
+
+            while (head) {
+                ListNode* temp = head;
+                head = head->next;
+                temp->next = NULL;
+                pq.push(temp);
             }
         }
-        if (pq.size() == 0)
-            return NULL;
-        ListNode* head = pq.top();
-        pq.pop();
-        ListNode* temp = head;
+
+        ListNode* ans = new ListNode(-1);
+        ListNode* temp = ans;
         while (pq.size()) {
-            ListNode* t = pq.top();
+            temp->next = pq.top();
             pq.pop();
-            temp->next = t;
             temp = temp->next;
         }
-        return head;
+
+        return ans->next;
     }
 };
