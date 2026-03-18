@@ -57,6 +57,7 @@ Let me know if you'd like any more modifications! 🚀
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0023-merge-k-sorted-lists](https://github.com/SwastiKoder/LeetCode/tree/main/0023-merge-k-sorted-lists/) | Hard |
 | [0215-kth-largest-element-in-an-array](https://github.com/SwastiKoder/LeetCode/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0347-top-k-frequent-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/SwastiKoder/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
@@ -72,6 +73,7 @@ Let me know if you'd like any more modifications! 🚀
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0023-merge-k-sorted-lists](https://github.com/SwastiKoder/LeetCode/tree/main/0023-merge-k-sorted-lists/) | Hard |
 | [0215-kth-largest-element-in-an-array](https://github.com/SwastiKoder/LeetCode/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0347-top-k-frequent-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/SwastiKoder/LeetCode/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
@@ -143,4 +145,12 @@ Let me know if you'd like any more modifications! 🚀
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0703-kth-largest-element-in-a-stream](https://github.com/SwastiKoder/LeetCode/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
+## Linked List
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0023-merge-k-sorted-lists](https://github.com/SwastiKoder/LeetCode/tree/main/0023-merge-k-sorted-lists/) | Hard |
+## Merge Sort
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0023-merge-k-sorted-lists](https://github.com/SwastiKoder/LeetCode/tree/main/0023-merge-k-sorted-lists/) | Hard |
 <!---LeetCode Topics End-->
