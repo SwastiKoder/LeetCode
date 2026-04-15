@@ -51,6 +51,7 @@ Let me know if you'd like any more modifications! 🚀
 | [0347-top-k-frequent-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/SwastiKoder/LeetCode/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
 | [0658-find-k-closest-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0658-find-k-closest-elements/) | Medium |
+| [0786-k-th-smallest-prime-fraction](https://github.com/SwastiKoder/LeetCode/tree/main/0786-k-th-smallest-prime-fraction/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/SwastiKoder/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
 | [1046-last-stone-weight](https://github.com/SwastiKoder/LeetCode/tree/main/1046-last-stone-weight/) | Easy |
 | [1636-sort-array-by-increasing-frequency](https://github.com/SwastiKoder/LeetCode/tree/main/1636-sort-array-by-increasing-frequency/) | Easy |
@@ -68,6 +69,7 @@ Let me know if you'd like any more modifications! 🚀
 | [0347-top-k-frequent-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/SwastiKoder/LeetCode/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
 | [0658-find-k-closest-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0658-find-k-closest-elements/) | Medium |
+| [0786-k-th-smallest-prime-fraction](https://github.com/SwastiKoder/LeetCode/tree/main/0786-k-th-smallest-prime-fraction/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/SwastiKoder/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
 | [1636-sort-array-by-increasing-frequency](https://github.com/SwastiKoder/LeetCode/tree/main/1636-sort-array-by-increasing-frequency/) | Easy |
 ## Heap (Priority Queue)
@@ -79,6 +81,7 @@ Let me know if you'd like any more modifications! 🚀
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/SwastiKoder/LeetCode/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
 | [0658-find-k-closest-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0658-find-k-closest-elements/) | Medium |
 | [0703-kth-largest-element-in-a-stream](https://github.com/SwastiKoder/LeetCode/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
+| [0786-k-th-smallest-prime-fraction](https://github.com/SwastiKoder/LeetCode/tree/main/0786-k-th-smallest-prime-fraction/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/SwastiKoder/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
 | [1046-last-stone-weight](https://github.com/SwastiKoder/LeetCode/tree/main/1046-last-stone-weight/) | Easy |
 ## Quickselect
@@ -92,6 +95,7 @@ Let me know if you'd like any more modifications! 🚀
 | ------- | ------- |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/SwastiKoder/LeetCode/tree/main/0378-kth-smallest-element-in-a-sorted-matrix/) | Medium |
 | [0658-find-k-closest-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0658-find-k-closest-elements/) | Medium |
+| [0786-k-th-smallest-prime-fraction](https://github.com/SwastiKoder/LeetCode/tree/main/0786-k-th-smallest-prime-fraction/) | Medium |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -113,6 +117,7 @@ Let me know if you'd like any more modifications! 🚀
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0658-find-k-closest-elements](https://github.com/SwastiKoder/LeetCode/tree/main/0658-find-k-closest-elements/) | Medium |
+| [0786-k-th-smallest-prime-fraction](https://github.com/SwastiKoder/LeetCode/tree/main/0786-k-th-smallest-prime-fraction/) | Medium |
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |
